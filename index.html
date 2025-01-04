@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TaskFlow Pro</h1>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="totalCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingCount">0</p>
+            </div>
+        </div>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Add new task">
+            <select id="prioritySelect">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="date" id="dueDateInput">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
