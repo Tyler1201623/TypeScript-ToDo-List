@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro | 2025 Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Modern task management app with powerful features">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✓</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <h1>TaskFlow Pro <span class="version-badge">2025</span></h1>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="totalCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Important</h3>
+                <p id="importantCount">0</p>
+            </div>
+        </div>
+        
+        <div class="filter-bar">
+            <select id="filterSelect" class="filter-select">
+                <option value="all">All Tasks</option>
+                <option value="active">Active</option>
+                <option value="completed">Completed</option>
+                <option value="important">Important</option>
+            </select>
+            <button id="clearCompletedBtn" class="clear-btn">Clear Completed</button>
+        </div>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Add new task">
+            <select id="prioritySelect">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="urgent">Urgent</option>
+            </select>
+            <input type="date" id="dueDateInput">
+            <input type="text" id="tagInput" placeholder="Tags (comma separated)">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+    
+    <footer>
+        <p>TaskFlow Pro - <span id="currentYear"></span> Edition</p>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear().toString();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
